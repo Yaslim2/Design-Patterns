@@ -1,7 +1,7 @@
 import { Customer } from '../customer/customer';
-import { Vehicle } from '../../factory-method/vehicle/vehicle';
+import { VehicleProtocol } from '../vehicle/vehicle-protocol';
 
 export interface CreateVehicleCustomerFactory {
   createCustomer(customerName: string): Customer;
-  createVehicle(vehicleName: string, customerName: string): Vehicle;
+  createVehicle(vehicleName: string, customerName: string): VehicleProtocol;
 }

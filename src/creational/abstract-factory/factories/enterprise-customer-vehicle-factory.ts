@@ -2,8 +2,11 @@ import { Customer } from '../customer/customer';
 import { EnterpriseCustomer } from '../customer/enterprise-customer';
 import { EnterpriseCar } from '../vehicle/enterprise-car';
 import { VehicleProtocol } from '../vehicle/vehicle-protocol';
+import { CreateVehicleCustomerFactory } from './customer-vehicle-factory';
 
-export class EnterpriseCreateVehicleCustomerFactory {
+export class EnterpriseCreateVehicleCustomerFactory
+  implements CreateVehicleCustomerFactory
+{
   createCustomer(customerName: string): Customer {
     return new EnterpriseCustomer(customerName);
   }
