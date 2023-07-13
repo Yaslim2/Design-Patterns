@@ -20,5 +20,5 @@ export abstract class CustomerDataParser {
 
   protected hook(): void {}
 
-  protected abstract async parseDate(): Promise<CustomerData[]>;
+  protected abstract parseDate(): Promise<CustomerData[]>;
 }
